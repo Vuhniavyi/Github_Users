@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./fonts/HelveticaRegular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+$backgroundColor: #f5f5f5;
+$fontFamily: Helvetica Neue;
+$fontStyle: normal;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background: $backgroundColor;
+  .wrapper {
+    max-width: 1920px;
+    margin: auto;
+    .main {
+      max-width: 1920px;
+      padding: 30px;
+      background: $backgroundColor;
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .UsersListWrapper {
+        padding: 0px 30px;
+        background: #fff;
+        .UsersList {
+          .oneUser {
+            border-bottom: 1px solid #e1e4ea;
+            height: 120px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .linksWrapper {
+              .ava {
+                img {
+                  width: 80px;
+                  height: 80px;
+                  border-radius: 100%;
+                  cursor: pointer;
+                  &:hover {
+                    box-shadow: 0 0 10px;
+                    width: 90px;
+                    height: 90px;
+                  }
+                }
+              }
+              .login {
+                font-family: $fontFamily;
+                font-style: $fontStyle;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                color: #000000;
+                margin-left: 40px;
+                cursor: pointer;
+                @media screen and (max-width: 420px) {
+                  margin-left: 15px;
+                  font-size: 14px;
+                }
+                &:hover {
+                  font-weight: 900;
+                  font-size: 18px;
+                  text-decoration: none;
+                }
+              }
+            }
+            .button {
+              width: 92px;
+              height: 40px;
+              background: #ffffff;
+              border: 1px solid #000000;
+              box-sizing: border-box;
+              border-radius: 34px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              &:focus {
+                text-decoration: none;
+              }
+              &:hover {
+                text-decoration: none;
+                background: #e1e4ea;
+                background: black;
+                p {
+                  font-weight: 900;
+                  font-size: 14px;
+                  color: white;
+                  text-decoration: none;
+                }
+              }
+              p {
+                font-family: $fontFamily;
+                font-style: $fontStyle;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                color: #000000;
+                margin: 0px;
+              }
+            }
+          }
+        }
+      }
+
+      .singleUserWrapper {
+        height: 168px;
+        background: #ffffff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        .imgAvatar {
+          width: 15%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media screen and (max-width: 980px) {
+            width: 25%;
+          }
+          @media screen and (max-width: 520px) {
+            width: 35%;
+          }
+          img {
+            width: 120px;
+            height: 120px;
+            border-radius: 100%;
+            @media screen and (max-width: 980px) {
+              width: 100px;
+              height: 100px;
+            }
+            @media screen and (max-width: 520px) {
+              width: 80px;
+              height: 80px;
+            }
+          }
+        }
+        .singleUserInf {
+          height: 75%;
+          width: 85%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          @media screen and (max-width: 980px) {
+            width: 73%;
+            height: 65%;
+          }
+          @media screen and (max-width: 520px) {
+            width: 65%;
+            height: 50%;
+          }
+          .name {
+            font-family: $fontFamily;
+            font-style: $fontStyle;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 39px;
+            color: #000000;
+            @media screen and (max-width: 520px) {
+              font-size: 24px;
+              line-height: 24px;
+            }
+          }
+          .company {
+            font-family: $fontFamily;
+            font-style: $fontStyle;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            @media screen and (max-width: 520px) {
+              font-size: 12px;
+            }
+          }
+          .date {
+            font-family: $fontFamily;
+            font-style: $fontStyle;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            opacity: 0.4;
+            @media screen and (max-width: 520px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .PaginationListWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul {
+          li {
+            a {
+              height: 40px;
+              width: 40px;
+              border-radius: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #000000;
+              background: none;
+              border: none;
+              @media screen and (max-width: 420px) {
+                height: 29px;
+                width: 29px;
+              }
+              &:hover,
+              &:focus {
+                border: 1px solid #000000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
