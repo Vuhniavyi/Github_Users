@@ -30,15 +30,25 @@ function UserPage(props) {
             />
           ) : (
             <div className="singleUserWrapper">
-              <div className="imgAvatar">
+              <a
+                className="imgAvatar"
+                href={singleUser.html_url}
+                target="_BLANK"
+                rel="noopener noreferrer"
+              >
                 <img src={singleUser.avatar_url} width="120px" alt="ava" />
-              </div>
+              </a>
               <div className="singleUserInf">
-                <div className="name">
+                <a
+                  className="name"
+                  href={singleUser.html_url}
+                  target="_BLANK"
+                  rel="noopener noreferrer"
+                >
                   {singleUser.name
                     ? singleUser.name
                     : "The user did not provide his name"}
-                </div>
+                </a>
                 <div className="company">
                   {singleUser.company
                     ? singleUser.company
